@@ -5,23 +5,47 @@
   <title>Asim Farooq – Automation Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Main styles -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome (icons) -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
 
-  <!-- Theme toggle -->
   <script src="theme.js" defer></script>
 
   <style>
-    /* Contact section polish (self-contained safety) */
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .profile-pic {
+        margin: auto;
+      }
+    }
+
+    /* Contact */
     .contact-card {
       margin-top: 1.5rem;
       max-width: 420px;
@@ -77,7 +101,7 @@
   <nav>
     <div>
       <a href="index.html"><strong>Asim Farooq</strong></a>
-      <a href="projects.html">Projects</a>
+      <a href="work.html">Work</a>
     </div>
 
     <button class="icon-btn" onclick="toggleTheme()" aria-label="Toggle theme">
@@ -87,54 +111,87 @@
 </header>
 
 <div class="container">
-  <h1>Automation Engineer</h1>
-  <h2>DevOps • Embedded • Distributed Systems</h2>
 
-  <p>
-    I build reliable automation, real-time systems, and cross-platform applications —
-    from embedded hardware to cloud services.
-  </p>
+  <!-- HERO -->
+  <div class="hero">
+    <img src="me.jpeg" alt="Asim Farooq" class="profile-pic">
 
+    <div>
+      <h1>Automation Engineer</h1>
+      <h2>DevOps • Embedded • Distributed Systems</h2>
+
+      <p>
+        I build reliable automation, real-time systems, and cross-platform
+        applications — from embedded hardware to cloud services.
+      </p>
+    </div>
+  </div>
+
+  <!-- CURRENT FOCUS -->
+  <section>
+    <h3>Current Focus</h3>
+
+    <div class="card">
+      <h4>XConnIO (Core Team)</h4>
+
+      <p>
+        XConnIO is an open systems initiative focused on real-time
+        distributed communication and developer tooling.
+      </p>
+
+      <p>
+        As a core team member and presenter, I contribute to the design
+        and development of real-time distributed systems, developer tools,
+        and WAMP-based infrastructure.
+      </p>
+
+      <p>
+        <a href="https://github.com/xconnio" target="_blank">
+          github.com/xconnio
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- CORE FOCUS -->
   <section>
     <h3>Core Focus</h3>
     <div class="grid">
       <div class="card">WAMP, RPC, Pub/Sub, Distributed Systems</div>
       <div class="card">Linux Automation & DevOps</div>
       <div class="card">Arduino, ESP, Raspberry Pi</div>
-      <div class="card">Flutter Mobile & Desktop Apps</div>
+      <div class="card">Flutter Mobile & Desktop Applications</div>
     </div>
   </section>
 
-  <section>
-    <h3>Contact</h3>
+<section>
+  <h3>Contact</h3>
 
-    <div class="contact-card">
-      <a class="contact-row" href="mailto:asimfarooq5@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-        <span>asimfarooq5@gmail.com</span>
-      </a>
+  <div class="contact-inline">
+    <a href="mailto:asimfarooq5@gmail.com" class="contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <span>asimfarooq5@gmail.com</span>
+    </a>
+        <a href="mailto:asimfarooq5@gmail.com" class="contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <span>asim@xconn.io</span>
+    </a>
 
-      <a class="contact-row" href="mailto:asim@xconn.io">
-        <i class="fa-solid fa-envelope"></i>
-        <span>asim@asim.services</span>
-      </a>
 
-      <div class="contact-socials">
-        <a href="https://github.com/asimfarooq5" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+    <a href="https://github.com/asimfarooq5" target="_blank" class="contact-item">
+      <i class="fab fa-github"></i>
+      <span>asimfarooq5</span>
+    </a>
 
-        <a href="https://www.linkedin.com/in/asimfarooq5" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div>
-    </div>
-  </section>
+    <a href="https://www.linkedin.com/in/asimfarooq5" target="_blank" class="contact-item">
+      <i class="fab fa-linkedin"></i>
+      <span>asimfarooq5</span>
+    </a>
+  </div>
+</section>
+
 </div>
 
-<footer>
-  © 2026 Asim Farooq
-</footer>
 
 </body>
 </html>
